@@ -1,0 +1,22 @@
+{
+  "name": "nest-ui-system",
+  "version": "1.0.0",
+  "description": "A lightweight front-end CSS framework and methodology for building web interfaces.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendansparrow/nest-ui-system.git"
+  },
+  "author": "Brendan Sparrow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendansparrow/nest-ui-system/issues"
+  },
+  "homepage": "https://github.com/brendansparrow/nest-ui-system#readme"
+}
