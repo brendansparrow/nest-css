@@ -2,6 +2,10 @@
 
 A helpful glossary of definitions so that everyone can approach the project on the same page in terms of the language we use to describe the system.
 
+### Atomic Design
+
+A modular approach to building interfaces, popuarised by Brad Frost.
+
 ### Design System
 
 A colection of shared design patterns and practices that allow a team to build high-quality, consistent interfaces.
