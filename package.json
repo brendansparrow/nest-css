@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/brendansparrow/nest-ui-system/issues"
   },
-  "homepage": "https://github.com/brendansparrow/nest-ui-system#readme"
+  "homepage": "https://github.com/brendansparrow/nest-ui-system#readme",
+  "devDependencies": {
+    "kss": "^3.0.0-beta.25"
+  }
 }
