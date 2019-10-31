@@ -7,6 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
+    "kss": "kss --config kss-config.json",
+    "watch": "onchange 'sass/**/*.sass' -- npm run kss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/brendansparrow/nest-ui-system#readme",
   "devDependencies": {
-    "kss": "^3.0.0-beta.25"
+    "kss": "^3.0.0-beta.25",
+    "onchange": "^6.1.0"
   }
 }
