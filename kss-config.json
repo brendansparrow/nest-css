@@ -1,0 +1,15 @@
+{
+  "title"        : "Nest Style Guide",
+  "mask"         : "*.scss",
+  "placeholder"  : "[modifier]",
+
+  // input and output
+  "source"       : "sass/",
+  "destination"  : "styleguide/",
+
+  // relative to the generated style guide
+  "css": [
+    "../main.css"
+  ],
+  "js" : []
+}
