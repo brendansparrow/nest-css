@@ -1,0 +1,82 @@
+// Search
+// A search form to allow users to search for content.
+// Includes a label element with meaningful decription,
+// a search input with clear focus style and a submit button.
+//
+// Markup: search.html
+//
+// Components.Navigation.Search
+
+
+
+.search {
+  --button-width: 8em;
+  --button-bg-color: #0170bc;
+}
+
+
+.search-label {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.search-label + div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.search-input {
+  display: inline-block;
+  width: 100%;
+  
+  font-size: 1em;
+  border-radius: 0.25em;
+  border: 2px solid grey;
+  -webkit-appearance: none;
+  padding: 0.5em 0.5em 0.5em 2em;
+  margin-bottom: 0.5em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cg stroke-width='2' stroke='%236c6c6c' fill='none'%3E%3Cpath d='M16.29 15.91l-5-5'/%3E%3Ccircle cx='7' cy='7' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.5em center;
+  &:focus {
+    outline: 0;
+    border-color: darken(#0170bc, 10%);
+    box-shadow: 0 0 5px 0 darken(#0170bc, 10%);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .search-label + div {
+    flex-direction: row;
+  }
+  .search-input {
+    max-width: calc(100% - var(--button-width));
+    margin: 0 0.5em 0 0;
+  }
+}
+
+.search-button {
+  min-width: var(--button-width);
+  background: var(--button-bg-color);
+  color: #fff;
+  border: 0;
+  border-radius: 0.25em;
+  appearance: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0.75em 1.5em;
+  border: 2px solid transparent;
+  &:focus,
+  &:hover {
+    outline: 0;
+    border-color: darken(#0170bc, 10%);
+    background-color: darken(#0170bc, 5%);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.63);
+  }
+  &:active {
+    border-color: darken(#0170bc, 12%);
+    background-color: darken(#0170bc, 7%);
+  }
+}
+
