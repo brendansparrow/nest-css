@@ -4,15 +4,12 @@
 //
 // Markup:
 // <button class="button">Click Me</button>
-// <input type="submit" class="button">Submit</button>
 //
 // :hover - When user hovers over button.
 // :focus - When button is focused.
 // :active - When button is active.
-// .button--small - A small button.
-// .button--large - A large button.
 //
-// Styleguide Components.Buttons.Button
+// Styleguide Components.Buttons
 .button {
   position: relative;
   font-weight: bold;
@@ -20,8 +17,18 @@
   border: none;
   appearance: none;
   border-radius: var(--border-radius, 0.25em);
+  transition: all .2s;
+  will-change: transform;
 }
 
 .button:hover {
-  background-color: 
+  transform: translateY(1px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+.button:focus {
+  box-shadow: 0 2px 3px var(--focus-color, blue);
 }
