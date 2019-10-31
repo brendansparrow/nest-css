@@ -1,0 +1,27 @@
+// Button
+//
+// Use this class to style a button.
+//
+// Markup:
+// <button class="button">Click Me</button>
+// <input type="submit" class="button">Submit</button>
+//
+// :hover - When user hovers over button.
+// :focus - When button is focused.
+// :active - When button is active.
+// .button--small - A small button.
+// .button--large - A large button.
+//
+// Styleguide Components.Buttons.Button
+.button {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  appearance: none;
+  border-radius: var(--border-radius, 0.25em);
+}
+
+.button:hover {
+  background-color: 
+}

@@ -20,21 +20,42 @@ CSS Framework by Brendan Sparrow.
 
 
 // Settings
+//
+// Weight: 1
+//
+// Styleguide Settings
 @import "00-settings/";
 @import "00-settings/";
 
-// Tools
+// Tool
+//
+// Weight: 2
+//
+// Styleguide Tools
 @import "01-tools/";
 @import "01-tools/";
 
 // Generic
+//
+// Weight: 3
+//
+// Styleguide Generic
 @import "02-generic/reset";
+@import "03-generic/states";
 
 // Elements
+//
+// Weight: 4
+//
+// Styleguide Elements
 @import "03-elements/elements";
 @import "03-elements/forms";
 
 // Objects
+//
+// Weight: 5
+//
+// Styleguide Objects
 @import "04-objects/grid";
 @import "04-objects/layout";
 @import "04-objects/spacing";
@@ -42,6 +63,10 @@ CSS Framework by Brendan Sparrow.
 @import "04-objects/visibility";
 
 // Components
+//
+// Weight: 6
+//
+// Styleguide Components
 @import "05-components/accordion";
 @import "05-components/alert";
 @import "05-components/badge";
@@ -66,9 +91,17 @@ CSS Framework by Brendan Sparrow.
 @import "05-components/tooltip";
 
 // Templates
+//
+// Weight: 7
+//
+// Styleguide Templates
 @import "06-templates/dashboard";
 @import "06-templates/frontpage";
 @import "06-templates/landing";
 
 // Utilities
+//
+// Weight: 8
+//
+// Styleguide Utilities
 @import "06-utilities/helpers";
