@@ -146,3 +146,10 @@ $violet6: #72288a;
 $violet7: #632378;
 $violet8: #501c62;
 $violet9: #371343;
+
+
+// Easing functions
+
+$enter-timing-function: cubic-bezier(0, .5, .5, 1);
+$exit-timing-function: cubic-bezier(.5, 0, 1, .5);
+$translate-timing-function: cubic-bezier(.5, 0, .5, 1);

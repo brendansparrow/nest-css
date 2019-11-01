@@ -8,7 +8,7 @@ A modular approach to building interfaces, popuarised by Brad Frost.
 
 ### Design System
 
-A colection of shared design patterns and practices that allow a team to build high-quality, consistent interfaces.
+A collection of shared design patterns and practices that allow a team to build high-quality, consistent interfaces.
 
 ### Design Patterns
 
