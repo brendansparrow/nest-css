@@ -4,6 +4,11 @@ A lightweight design system and front-end CSS framework for building digital int
 ## Getting Started
 - Installation
 
+## Usage
+
+Run `npm run kss` to generate KSS docs.
+
+
 ## Principles
 	- Cross-Platform
 	- Inclusive Design
