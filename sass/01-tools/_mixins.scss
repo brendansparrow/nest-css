@@ -3,6 +3,24 @@
 // Style guide: Sass.mixins
 
 
+// font-size($size, $base, $unit)
+//
+// Implement a pixel fallback for proportional em or rem units
+//
+// $size - your desired font size in pixels
+// $base - your base font size, defaults to 16
+// $units - the units to use, defaults to rem
+//
+// Compatibility in IE9+, Firefox, Chrome, Safari, Edge, Samsung
+//
+// Styleguide Sass.mixins.font-size
+
+@mixin font-size($size, $base: 16, $unit: "rem") {
+  font-size: $size; // fallback for old browsers
+  font-size: ($size / $base) * 1#{$unit};
+}
+
+
 // opacity($opacity)
 //
 // Applies opacity to an element
