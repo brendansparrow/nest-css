@@ -1,0 +1,20 @@
+// Sass mixins
+//
+// Style guide: sass.mixins
+
+
+// opacity($opacity)
+//
+// Applies opacity to an element
+//
+// Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
+//
+// sass.mixins.opacity
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); // works in IE8
+}
+
+
