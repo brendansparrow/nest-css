@@ -44,6 +44,7 @@
 // It also allows for control of each individual direction with multiple arguments
 //
 // $position - the position property
+//
 // $args - additional arguments for directional control
 //
 // Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
@@ -71,4 +72,44 @@
 
 @mixin relative($args: '') {
   @include position(relative, $args);
+}
+
+
+// breakpoint($name)
+// 
+// Use this mixin to apply a responsive breakpoint from our named media queries
+//
+// Named media queries: http://css-tricks.com/naming-media-queries/
+//
+// $phone - max-width: 767px
+//
+// $tablet - min-width: 768px
+//
+// $laptop - min-width: 992px
+//
+// $desktop - min-width: 1280px
+//
+// $widescreen - min-width: 1980px
+//
+// Compatibility in IE9+, Firefox, Chrome, Safari, Edge
+//
+// Styleguide Sass.mixins.breakpoints
+
+$breakpoints: (
+  'phone':   ( max-width:  767px ),
+  'tablet':  ( min-width:  768px ),
+  'laptop': ( min-width:  992px ),
+  'desktop':  ( min-width: 1280px ),
+  'widescreen': ( min-width:  1980px )
+);
+
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
 }
