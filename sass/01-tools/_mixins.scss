@@ -18,3 +18,57 @@
 }
 
 
+// spread($gap)
+//
+// Spread like butter on toast
+// 
+// Apply this mixin to a child element to make it fill its parent container
+//
+// $gap - optional margin around the child element
+//
+// Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
+//
+// Styleguide Sass.mixins.positioning
+
+@mixin spread($gap) {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+
+
+// position($position, $args)
+//
+// This advanced mixin caters for fixed, relative and absolute positioning
+// It also allows for control of each individual direction with multiple arguments
+//
+// $position - the position property
+// $args - additional arguments for directional control
+//
+// Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
+// 
+// Styleguide.mixins.positioning
+
+@mixin position($position, $args) {
+  @each $dir in top right bottom left {
+    $i: index($args, $dir);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$dir}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+  @include position(relative, $args);
+}
