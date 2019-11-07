@@ -36,6 +36,22 @@
 }
 
 
+// container($max-width)
+//
+// Assign a max-width to the element and center it horizontally
+//
+// $max-width - apply a maximum width to the element
+//
+// Styleguide Sass.mixins.container
+
+@mixin container($max-width: 100%) {
+  display: block;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 // spread($gap)
 //
 // Spread like butter on toast
