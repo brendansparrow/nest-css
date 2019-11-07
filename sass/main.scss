@@ -24,16 +24,16 @@ CSS Framework by Brendan Sparrow.
 // Weight: 1
 //
 // Styleguide Settings
-@import "00-settings/";
-@import "00-settings/";
+@import "00-settings/config";
+@import "00-settings/derived-variables";
 
 // Tool
 //
 // Weight: 2
 //
 // Styleguide Tools
-@import "01-tools/";
-@import "01-tools/";
+@import "01-tools/functions";
+@import "01-tools/mixins";
 
 // Generic
 //

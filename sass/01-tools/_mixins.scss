@@ -1,6 +1,6 @@
 // Sass mixins
 //
-// Style guide: sass.mixins
+// Style guide: Sass.mixins
 
 
 // opacity($opacity)
@@ -9,7 +9,7 @@
 //
 // Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
 //
-// sass.mixins.opacity
+// Sass.mixins.opacity
 
 @mixin opacity($opacity) {
   opacity: $opacity;
@@ -48,7 +48,7 @@
 //
 // Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
 // 
-// Styleguide.mixins.positioning
+// Styleguide Sass.mixins.positioning
 
 @mixin position($position, $args) {
   @each $dir in top right bottom left {
