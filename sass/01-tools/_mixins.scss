@@ -121,6 +121,23 @@
   font-size: ($size / $base) * 1#{$unit};
 }
 
+// lhCrop($line-height, $capital-letter: 1)
+//
+// Crop line-height to align better with baseline.
+// Use on dropcaps and other elements.
+//
+// Styleguide Sass.mixins.lhcrop
+
+@mixin lhCrop($line-height, $capital-letter: 1) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+  }
+}
+
 
 // opacity($opacity)
 //
