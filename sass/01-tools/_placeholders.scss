@@ -1,0 +1,17 @@
+// Sass Placeholders
+//
+// Placeholders define styles to be reused in your sass files.
+// They do not compile unless you reference them somewhere.
+//
+// Styleguide Sass.placeholders
+
+%u-display-flex {
+  display: flex;
+}
+
+@each $wrap in (nowrap, wrap, wrap-reverse) { 
+  @include make-utility((
+    alias: 'fw-' + $wrap,
+    flex-wrap: $wrap
+  ));
+}
