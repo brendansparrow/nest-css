@@ -1,0 +1,80 @@
+// Sass functions
+//
+// Core functions that save you from repeatedly writing the same code.
+//
+// Styleguide Sass.functions
+
+
+// strReplace($string, $search, $replace: '')
+//
+// Utility function for replacing strings
+//
+// Styleguide Sass.functions.strings
+
+@function strReplace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + strReplace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// toString($list, $glue: '', $is-nested: false)
+//
+// Utility function to convert to a string
+//
+// Styleguide Sass.functions.strings
+
+@function toString($list, $glue: '', $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: $result#{toString($e, $glue, true)};
+    }
+
+    @else {
+      $result: if($i != length($list) or $is-nested, $result#{$e}#{$glue}, $result#{$e});
+    }
+  }
+
+  @return $result;
+}
+
+// stripUnit($number)
+//
+// Utility function to strip units from declared values
+//
+// Styleguide Sass.functions.units
+
+@function stripUnit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// toPx($number)
+//
+// Utility function to convert to pixels
+//
+// Styleguide Sass.functions.units
+
+@function toPx($number) {
+  @return $number + 0px;
+}
+
+// toRem($number)
+//
+// Utility function to convert to rems
+//
+// Styleguide Sass.functions.units
+
+@function toRem($number) {
+  @return $number + 0rem;
+}
