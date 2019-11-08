@@ -45,6 +45,21 @@
 }
 
 
+// make-class($selector, $properties, $value)
+//
+// Generate classes
+//
+// Styleguide Sass.mixins.utilities
+
+@mixin make-class($selector, $properties, $value) {
+  #{$selector} {
+    @each $property in $properties {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+
 // make-utility($args)
 //
 // Generate utilities
