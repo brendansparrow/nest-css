@@ -121,14 +121,14 @@
   font-size: ($size / $base) * 1#{$unit};
 }
 
-// lhCrop($line-height, $capital-letter: 1)
+// lh-crop($line-height, $capital-letter: 1)
 //
 // Crop line-height to align better with baseline.
 // Use on dropcaps and other elements.
 //
 // Styleguide Sass.mixins.lhcrop
 
-@mixin lhCrop($line-height, $capital-letter: 1) {
+@mixin lh-crop($line-height, $capital-letter: 1) {
   &::before {
     content: '';
     display: block;
@@ -139,13 +139,26 @@
 }
 
 
+// text-truncate
+//
+// Truncate text by hiding overflow and adding an ellipsis
+//
+// Styleguide Sass.mixins.text-truncate
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 // opacity($opacity)
 //
 // Applies opacity to an element
 //
 // Compatibility in IE8+, Firefox, Chrome, Safari, Edge, Opera, Samsung
 //
-// Sass.mixins.opacity
+// Styleguide Sass.mixins.opacity
 
 @mixin opacity($opacity) {
   opacity: $opacity;
