@@ -147,6 +147,58 @@ $violet7: #632378;
 $violet8: #501c62;
 $violet9: #371343;
 
+:root {
+  --color-bg: hsl(0, 0%, 100%);
+  --color-contrast-lower: hsl(0, 0%, 95%);
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-higher: hsl(240, 8%, 12%);
+  --color-primary: hsl(220, 90%, 56%);
+  --color-accent: hsl(355, 90%, 61%);
+  --color-success: hsl(94, 48%, 56%);
+  --color-warning: hsl(46, 100%, 61%);
+  --color-error: hsl(355, 90%, 61%);
+  --color-white: white;
+  --color-black: black;
+}
+
+
+// Typography
+
+
+// Spacing
+:root {
+  --space-xxxxs: ;
+  --space-xxxs: ;
+  --space-xxs: ;
+  --space-xs: ;
+  --space-sm: ;
+  --space-md: ;
+  --space-lg: ;
+  --space-xl: ;
+  --space-xxl: ;
+  --space-xxxl: ;
+  --space-xxxxl: ;
+}
+
+// Borders
+: root {
+  --radius-sm: 0.125em;
+  --radius-md: 0.25em;
+  --radius-lg: 0.5em;
+}
+
+// Depth
+
+:root {
+  --shadow-xs: ;
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+  --shadow-xl: ;
+}
+
 
 // Easing functions
 
